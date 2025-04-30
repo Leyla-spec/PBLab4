@@ -53,8 +53,18 @@ for (int i = 0; i < tam_Ededler2.Length; i++)
     }
 }
 
-Console.WriteLine("Cut ededlerin cemi: " + cutIndexSum);
-Console.WriteLine("Tek ededlerin cemi: " + tekIndexSum);
+
+if (cutIndexSum > tekIndexSum)
+{
+    Console.WriteLine("Cut ededlerin cemi: " + cutIndexSum);
+    Console.WriteLine("Tek ededlerin cemi: " + tekIndexSum);
+    Console.WriteLine("Fərq: " + (cutIndexSum - tekIndexSum));
+}
+else
+{
+    Console.WriteLine("Cut ededlerin cemi: " + cutIndexSum);
+    Console.WriteLine("Tek ededlerin cemi: " + tekIndexSum);
+    Console.WriteLine("Fərq: " + (tekIndexSum - cutIndexSum));
 
 
 
