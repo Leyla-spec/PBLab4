@@ -8,23 +8,52 @@ using System.Threading.Channels;
 
 
 
-int[] tam_Ededler = new int [] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
-Console.WriteLine("cut ededler");
+int[] tam_Ededler = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+int countEven = 0;
+int countOdd = 0;
+
 for (int i = 0; i < tam_Ededler.Length; i++)
 {
     if (tam_Ededler[i] % 2 == 0)
     {
-        Console.WriteLine( tam_Ededler[i]);
+        countEven++;
+    }
+    else
+    {
+        countOdd++;
     }
 };
-Console.WriteLine("tek ededler");
+
+int[] massivEven = new int { countEven };
+int[] massivOdd = new int { countOdd };
+Console.WriteLine(massivEven.Length);
+Console.WriteLIne(massivOdd.Length);
+int indexEven = 0;
+int indexOdd = 0;
+
 for (int i = 0; i < tam_Ededler.Length; i++)
 {
-    if (tam_Ededler[i] % 2 != 0)
+    if ( tam_Ededler% 2 == 0)
     {
-        Console.WriteLine(tam_Ededler[i]);
+        massivEven[indexEven] = tam_Ededler[i];
+        indexEven++;
     }
+    else
+    {
+        massivOdd[indexOdd] = tam_Ededler[i];
+        indexOdd++;
+    }
+}
+
+foreach ( int i in massivEven)
+{
+    Console.WriteLine(i);
+}
+foreach (int i in massivOdd)
+{
+    Console.WriteLine(i);
 }
 
 
